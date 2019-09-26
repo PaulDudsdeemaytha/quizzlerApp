@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-//    @IBOutlet var progressBar: UIView!
     @IBOutlet weak var progressBar: UIView!
     @IBOutlet weak var progressLabel: UILabel!
     // Loads the first question
@@ -65,12 +64,10 @@ class ViewController: UIViewController {
     func checkAnswer() {
         let correctAnswer = allQuestions.list[questionNumber].answer
         if correctAnswer == pickedAnswer {
-//            print("Correct")
             ProgressHUD.showSuccess("Correct")
             score += 1
         }
         else {
-//            print("Wrong")
             ProgressHUD.showError("Wrong")
         }
     }
